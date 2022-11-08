@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from 'src/app/services/search.service';
 
 @Component({
   selector: 'app-header-search',
   templateUrl: './header-search.component.html',
-  styleUrls: ['./header-search.component.scss']
+  styleUrls: ['./header-search.component.scss'],
 })
 export class HeaderSearchComponent implements OnInit {
-  searchText!: string;
+  searchedCity!: string;
 
-  constructor() { }
+  constructor(private searchService: SearchService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  searchMovies() {
-    if (this.searchText) {
-      console.log(this.searchText)
+  searchWeather() {
+    if (this.searchedCity) {
+      if (this.searchedCity) {
+        this.searchService.searchText.next(this.searchedCity);
+      }
     }
   }
 }
-
-

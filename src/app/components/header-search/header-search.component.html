@@ -1,7 +1,7 @@
-<form id="search-form" name="search" (ngSubmit)="searchMovies()">
+<form id="search-form" name="search" (ngSubmit)="searchWeather()">
   <div class="d-flex align-items-center header-search">
     <div class="hidden-xm">Search City</div>
-    <input type="text" class="form-control" placeholder="City" name="searchText" required [(ngModel)]="searchText">
+    <input type="text" class="form-control" placeholder="City" name="city" required [(ngModel)]="searchedCity">
     <button type="submit" class="btn btn-primary">Search</button>
   </div>
 </form>

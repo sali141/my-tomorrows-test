@@ -7,20 +7,17 @@ import { WeatherReportComponent } from './components/weather-report/weather-repo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HeaderSearchComponent } from './components/header-search/header-search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     WeatherReportComponent,
-    HeaderSearchComponent
+    HeaderSearchComponent,
   ],
-  imports: [
-    BrowserModule,
-    NgbModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, NgbModule, FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
