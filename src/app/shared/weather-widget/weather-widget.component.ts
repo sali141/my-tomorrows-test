@@ -19,6 +19,5 @@ export class WeatherWidgetComponent implements OnInit {
     this.dateTime = new Date();
     this.weatherMain = this.weather.weather[0];
     this.iconPath = environment.assetUrl + this.weatherMain.icon + '.png';
-    console.log(this.weather);
   }
 }
