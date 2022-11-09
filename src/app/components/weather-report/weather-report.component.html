@@ -1,16 +1,24 @@
-<div class="body-content">
-  <div class="loader-wrapper" *ngIf="isLoading">
-    <div class="loader"></div>
-  </div>
+<app-header *ngIf="weather"></app-header>
+
+<div class="body-content container">
   <app-error-message *ngIf="errorMsg" [errorMessage]="errorMsg"></app-error-message>
-  <div class="weather-report" *ngIf="!weather">
+  <div class="weather-report d-flex flex-column align-items-center" *ngIf="!weather">
     <h2 class="text-center mt-5">
       Welcome to weather report!
       <div class="mt-3 fs-18">Search your city to continue</div>
+      <div class="my-4">
+        <app-weather-search></app-weather-search>
+      </div>
+      <div class="loader-wrapper" *ngIf="isLoading">
+        <div class="loader"></div>
+      </div>
       <img src="/assets/img/weather_icon.png" alt="image">
     </h2>
   </div>
   <div *ngIf="weather">
     <app-weather-widget [weather]="weather"></app-weather-widget>
+    <div class="d-flex justify-content-center mt-3">
+      <button type="button" (click)="goBack()" class="btn btn-secondary text-white">Back</button>
+    </div>
   </div>
 </div>

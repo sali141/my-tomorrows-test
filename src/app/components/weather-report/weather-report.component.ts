@@ -9,14 +9,14 @@ import { SearchService } from 'src/app/services/search.service';
 })
 export class WeatherReportComponent implements OnInit {
   isLoading: boolean = false;
-  weather!: WeatherResponse | null ;
+  weather!: WeatherResponse | null;
   errorMsg!: string | null;
 
   constructor(private searchService: SearchService) {}
 
   ngOnInit(): void {
     this.searchService.searchText.subscribe((data) => {
-      this.isLoading = true; 
+      this.isLoading = true;
       this.searchService.fetchWeatherByCity(data).subscribe(
         (response: WeatherResponse) => {
           this.weather = response;
@@ -36,5 +36,10 @@ export class WeatherReportComponent implements OnInit {
         }
       );
     });
+  }
+
+  goBack() {
+    this.isLoading = false;
+    this.weather = null;
   }
 }

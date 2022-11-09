@@ -15,9 +15,7 @@ export class WeatherSearchComponent implements OnInit {
 
   searchWeather() {
     if (this.searchedCity) {
-      if (this.searchedCity) {
-        this.searchService.searchText.next(this.searchedCity);
-      }
+      this.searchService.searchText.next(this.searchedCity);
     }
   }
 }
