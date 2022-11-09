@@ -5,12 +5,12 @@
         <div class="weather-city-name text-center">{{weather?.name}}
           <flag [code]="weather?.sys?.country!" [size]="'lg'" [effect]="'round'"></flag>
         </div>
-        <div class="weather-date">{{dateTime | date: 'long' }}</div>
+        <div class="weather-date">{{dateTime | date: 'medium' }}</div>
       </div>
     </div>
     <div class="card-body">
       <div class="d-md-flex justify-content-between">
-        <div class="d-flex justify-content-sm-center align-items-center">
+        <div class="d-flex justify-content-center align-items-center">
           <img [src]="weatherMain.icon | weatherIcon" />
           <div class="fs-20">
             {{weatherMain.main}} - {{weather?.main?.temp! | celsius | number:'1.0-0'}} &#8451;
