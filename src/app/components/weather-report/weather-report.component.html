@@ -1,3 +1,15 @@
-<div class="weather-report">
-  Weather Report Works
+<div class="body-content">
+  <div class="loader-wrapper" *ngIf="isLoading">
+    <div class="loader"></div>
+  </div>
+  <div *ngIf="!weather">
+    <h2 class="text-center mt-5">
+      Welcome to weather report!
+      <div class="mt-3 fs-18">Search your city to continue</div>
+      <img src="/assets/img/weather_icon.png" alt="image">
+    </h2>
+  </div>
+  <div *ngIf="weather">
+    <app-weather-widget [weather]="weather"></app-weather-widget>
+  </div>
 </div>

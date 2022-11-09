@@ -9,7 +9,7 @@ import { SearchService } from 'src/app/services/search.service';
 })
 export class WeatherReportComponent implements OnInit {
   isLoading: boolean = false;
-  weather!: WeatherResponse;
+  weather!: WeatherResponse ;
   errorMsg!: string;
 
   constructor(private searchService: SearchService) {}
@@ -19,14 +19,23 @@ export class WeatherReportComponent implements OnInit {
       this.isLoading = true; // show the initial loading untill the data recieved from API
       this.searchService.fetchWeatherByCity(data).subscribe(
         (response: WeatherResponse) => {
-          console.log(response);
-          this.isLoading = false;
+          this.weather = response;
         },
-        (error: any) => {
-          this.isLoading = false;
+        (err: any) => {
+          if (err.error && err.error.message) {
+            this.errorMsg = err.error.message;
+            return;
+          }
           this.errorMsg = 'Unknown error occured';
+        },
+        () => {
+          this.isLoading = false;
         }
       );
     });
+  }
+
+  weatherFound() {
+    return Object.keys(this.weather).length > 0;
   }
 }

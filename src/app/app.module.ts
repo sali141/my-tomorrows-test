@@ -8,6 +8,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherSearchComponent } from './shared/weather-search/weather-search.component';
+import { WeatherWidgetComponent } from './shared/weather-widget/weather-widget.component';
+import { AngularCountriesFlagsModule } from 'angular-countries-flags';
+import { WeatherIconPipe } from './pipes/weather-icon.pipe';
+import { CelsiusPipe } from './pipes/celsius.pipe';
 
 @NgModule({
   declarations: [
@@ -15,8 +19,17 @@ import { WeatherSearchComponent } from './shared/weather-search/weather-search.c
     HeaderComponent,
     WeatherReportComponent,
     WeatherSearchComponent,
+    WeatherWidgetComponent,
+    WeatherIconPipe,
+    CelsiusPipe,
   ],
-  imports: [BrowserModule, NgbModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    NgbModule,
+    FormsModule,
+    HttpClientModule,
+    AngularCountriesFlagsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

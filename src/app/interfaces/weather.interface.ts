@@ -1,6 +1,6 @@
 export interface WeatherResponse {
   coord: Coord;
-  weather: Weather;
+  weather: [Weather];
   base: string;
   main: Main;
   visibility: number;
@@ -38,6 +38,7 @@ export interface Main {
 export interface Wind {
   speed: number;
   deg: number;
+  gust:number;
 }
 
 export interface Clouds {

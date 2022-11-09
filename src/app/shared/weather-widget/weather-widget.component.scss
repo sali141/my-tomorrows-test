@@ -1,0 +1,14 @@
+.weather {
+  &-city-name {
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }
+
+  &-body {
+    font-size: 15px !important;
+  }
+
+  &-footer {
+    font-size: 15px !important;
+  }
+}

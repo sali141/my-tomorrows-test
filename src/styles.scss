@@ -1,4 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import "assets/css/variables";
+@import "assets/css/loader";
 
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+body {
+  margin: 2px 0;
+  font-family: "Roboto", sans-serif !important;
+  background-color: $color-body-bg !important;
+  color: $color-light-black !important;
+  font-size: 18px !important;
+}
+
+.body-content {
+  padding: 100px 40px 40px 40px;
+}
+
+.fs-18 {
+  font-size: 18px !important;
+}
+
+.fs-20 {
+  font-size: 20px !important;
+}
+
+@import "~bootstrap/scss/bootstrap";

@@ -4,7 +4,7 @@ $lg_screen : 992px;
 $xl_screen : 1200px;
 
 // colors 
-$color-primary : #307cfb;
+$color-primary : #e96e50;
 $color-white : #fff;
 $color-body-bg : #fcfcfd;
 $color-light-black : #3b3e3f;
@@ -14,3 +14,8 @@ $color-error-red : #e41b4d;
 $color-error-bg : #fdecf0;
 $color-greenish-gray : #f2f5f7;
 $color-disabled : #d2d5d9;
+
+$theme-colors: (
+  "primary": $color-primary,
+  "danger": $color-error-red,
+);
