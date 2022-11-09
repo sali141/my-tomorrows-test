@@ -3,7 +3,7 @@
     <div class="loader"></div>
   </div>
   <app-error-message *ngIf="errorMsg" [errorMessage]="errorMsg"></app-error-message>
-  <div *ngIf="!weather">
+  <div class="weather-report" *ngIf="!weather">
     <h2 class="text-center mt-5">
       Welcome to weather report!
       <div class="mt-3 fs-18">Search your city to continue</div>

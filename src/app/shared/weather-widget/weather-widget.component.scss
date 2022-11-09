@@ -1,3 +1,5 @@
+@import "~src/assets/css/variables";
+
 .weather {
   &-city-name {
     text-transform: uppercase;
@@ -10,5 +12,15 @@
 
   &-footer {
     font-size: 15px !important;
+  }
+}
+
+
+@media screen and (max-width: $sm_screen) {
+  .weather  {
+    &-date {
+      font-size: 0.8em !important;
+      text-align: center;
+    }
   }
 }

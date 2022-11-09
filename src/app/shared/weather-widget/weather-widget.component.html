@@ -1,35 +1,35 @@
 <div class="weather">
-  <div class=" card " *ngIf="weather">
+  <div class="card " *ngIf="weather">
     <div class="card-header bg-primary text-white">
-      <div class="card-title d-flex justify-content-between align-items-center">
+      <div class="card-title d-md-flex justify-content-between align-items-center">
         <div class="weather-city-name text-center">{{weather?.name}}
           <flag [code]="weather?.sys?.country!" [size]="'lg'" [effect]="'round'"></flag>
         </div>
-        <span>{{dateTime | date: 'long' }}</span>
+        <div class="weather-date">{{dateTime | date: 'long' }}</div>
       </div>
     </div>
     <div class="card-body">
-      <div class="d-flex justify-content-between">
-        <div class="d-flex align-items-center">
+      <div class="d-md-flex justify-content-between">
+        <div class="d-flex justify-content-sm-center align-items-center">
           <img [src]="weatherMain.icon | weatherIcon" />
           <div class="fs-20">
             {{weatherMain.main}} - {{weather?.main?.temp! | celsius | number:'1.0-0'}} &#8451;
           </div>
         </div>
-        <div> {{weatherMain.description}}</div>
+        <div class="text-center"> {{weatherMain.description}}</div>
       </div>
       <div class="row mt-3 weather-body">
-        <div class="col-4">
+        <div class="col-md-4">
           <div class="my-2">Maximum Temperature: {{weather?.main?.temp_max! | celsius | number:'1.0-0'}} &#8451;</div>
           <div class="my-2">Minimum Temperature: {{weather?.main?.temp_min! | celsius | number:'1.0-0'}} &#8451;</div>
           <div class="my-2">Human Perception: {{weather?.main?.feels_like! | celsius | number:'1.0-0'}} &#8451;</div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4">
           <div class="my-2">Clouds: {{weather?.clouds?.all}}%</div>
           <div class="my-2">Humidity: {{weather?.main?.humidity}}%</div>
           <div class="my-2">Pressure: {{weather?.main?.pressure}}hPa</div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4">
           <div class="my-2">Wind Speed: {{weather?.wind?.speed}} meter/sec</div>
           <div class="my-2">Wind Direction: {{weather?.wind?.deg}}</div>
           <div class="my-2">Wind Gust: {{weather?.wind?.gust}} meter/sec</div>

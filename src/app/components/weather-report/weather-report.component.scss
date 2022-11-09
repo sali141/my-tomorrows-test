@@ -1,3 +1,9 @@
-.weather-report {
-  padding-top: 80px;
+@import "~src/assets/css/variables";
+
+@media screen and (max-width: $sm_screen) {
+  .weather-report  {
+    img {
+      max-width: 100%;
+    }
+  }
 }
