@@ -3,7 +3,7 @@
     <div class="card-header bg-primary text-white">
       <div class="card-title d-md-flex justify-content-between align-items-center">
         <div class="weather-city-name text-center">{{weather?.name}}
-          <flag [code]="weather?.sys?.country!" [size]="'lg'" [effect]="'round'"></flag>
+          <span class="fi fi-{{weather?.sys?.country! | lowercase}}"></span>
         </div>
         <div class="weather-date">{{dateTime | date: 'medium' }}</div>
       </div>
