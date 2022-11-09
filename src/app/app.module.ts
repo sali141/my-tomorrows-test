@@ -13,7 +13,6 @@ import { HeaderComponent } from './shared/header/header.component';
 import { WeatherSearchComponent } from './shared/weather-search/weather-search.component';
 import { WeatherWidgetComponent } from './shared/weather-widget/weather-widget.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
