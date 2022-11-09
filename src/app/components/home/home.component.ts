@@ -3,11 +3,11 @@ import { WeatherResponse } from 'src/app/interfaces/weather.interface';
 import { SearchService } from 'src/app/services/search.service';
 
 @Component({
-  selector: 'app-weather-report',
-  templateUrl: './weather-report.component.html',
-  styleUrls: ['./weather-report.component.scss'],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
 })
-export class WeatherReportComponent implements OnInit {
+export class HomeComponent implements OnInit {
   isLoading: boolean = false;
   weather!: WeatherResponse | null;
   errorMsg!: string | null;
