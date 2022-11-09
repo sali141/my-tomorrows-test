@@ -6,15 +6,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { WeatherReportComponent } from './components/weather-report/weather-report.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { HeaderSearchComponent } from './components/header-search/header-search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { WeatherSearchComponent } from './shared/weather-search/weather-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     WeatherReportComponent,
-    HeaderSearchComponent,
+    WeatherSearchComponent,
   ],
   imports: [BrowserModule, NgbModule, FormsModule, HttpClientModule],
   providers: [],
