@@ -2,6 +2,7 @@
   <div class="loader-wrapper" *ngIf="isLoading">
     <div class="loader"></div>
   </div>
+  <app-error-message *ngIf="errorMsg" [errorMessage]="errorMsg"></app-error-message>
   <div *ngIf="!weather">
     <h2 class="text-center mt-5">
       Welcome to weather report!

@@ -12,6 +12,7 @@ import { WeatherWidgetComponent } from './shared/weather-widget/weather-widget.c
 import { AngularCountriesFlagsModule } from 'angular-countries-flags';
 import { WeatherIconPipe } from './pipes/weather-icon.pipe';
 import { CelsiusPipe } from './pipes/celsius.pipe';
+import { ErrorMessageComponent } from './shared/error-message/error-message.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CelsiusPipe } from './pipes/celsius.pipe';
     WeatherReportComponent,
     WeatherSearchComponent,
     WeatherWidgetComponent,
+    ErrorMessageComponent,
     WeatherIconPipe,
     CelsiusPipe,
   ],

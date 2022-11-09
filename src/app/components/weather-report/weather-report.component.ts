@@ -9,19 +9,22 @@ import { SearchService } from 'src/app/services/search.service';
 })
 export class WeatherReportComponent implements OnInit {
   isLoading: boolean = false;
-  weather!: WeatherResponse ;
-  errorMsg!: string;
+  weather!: WeatherResponse | null ;
+  errorMsg!: string | null;
 
   constructor(private searchService: SearchService) {}
 
   ngOnInit(): void {
     this.searchService.searchText.subscribe((data) => {
-      this.isLoading = true; // show the initial loading untill the data recieved from API
+      this.isLoading = true; 
       this.searchService.fetchWeatherByCity(data).subscribe(
         (response: WeatherResponse) => {
           this.weather = response;
+          this.errorMsg = null;
         },
         (err: any) => {
+          this.isLoading = false;
+          this.weather = null;
           if (err.error && err.error.message) {
             this.errorMsg = err.error.message;
             return;
@@ -33,9 +36,5 @@ export class WeatherReportComponent implements OnInit {
         }
       );
     });
-  }
-
-  weatherFound() {
-    return Object.keys(this.weather).length > 0;
   }
 }
